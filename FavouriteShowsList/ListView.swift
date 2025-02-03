@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct Show: Identifiable {
+    let id = UUID()
+    let name: String
+    let description: String
+}
+
 struct ListView: View {
     var body: some View {
         VStack {
