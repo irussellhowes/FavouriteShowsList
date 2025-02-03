@@ -28,10 +28,18 @@ struct ListView: View {
     ]
 
     var body: some View {
-        VStack {
-
+        NavigationView {
+            List(shows) { show in
+                VStack(alignment: .leading) {
+                    Text(show.name)
+                        .font(.headline)
+                    Text(show.description)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .navigationTitle("Top 10 Shows")
         }
-        .padding()
     }
 }
 
